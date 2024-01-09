@@ -1,5 +1,6 @@
 const fs = require("fs");
 const [A, B] = fs.readFileSync(0, "utf8").toString().trim().split("\n");
+//배열 구조분해 할당 이용하기
 
 const num1 = parseInt(A);
 //map을 씀으로써 내부요소를 문자열->숫자로 바꾼다
