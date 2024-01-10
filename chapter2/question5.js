@@ -1,8 +1,8 @@
 const fs = require("fs");
 const inputData = fs.readFileSync(0, "utf8").toString().split(" ");
 
-const hour = parseInt(inputData[0]);
-const minuite = parseInt(inputData[1]);
+let hour = parseInt(inputData[0]);
+let minuite = parseInt(inputData[1]);
 
 if (hour === 0 && minuite - 45 < 0) {
   hour = 23;

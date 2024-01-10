@@ -1,7 +1,7 @@
 const fs = require("fs");
 const inputData = fs.readFileSync(0, "utf8").toString().split(" ");
 
-const score = parseInt(inputData[0]);
+let score = parseInt(inputData[0]);
 
 if (score >= 90 && score <= 100) {
   console.log("A");
