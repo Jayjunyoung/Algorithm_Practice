@@ -1,7 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <string>
-using namespace std;
+#include "pch.h"
 
 // Hello World!
 void Print_HelloWorld()
