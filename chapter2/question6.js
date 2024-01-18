@@ -3,7 +3,7 @@ const inputData = fs.readFileSync(0, "utf8").toString().split("\n");
 
 let a = parseInt(inputData[0].split(" ")[0]);
 //배열 inputData에서 첫 번째 요소를 선택하고, 그 값을 공백(" ")을 기준으로
-//나눈 후 첫 번째 요소를 정수로 변환하여 변수 a에 저장..
+//배열을 만들어 첫 번째 요소를 정수로 변환하여 변수 a에 저장..
 let b = parseInt(inputData[0].split(" ")[1]);
 let c = parseInt(inputData[1]);
 
