@@ -12,7 +12,7 @@ if (hour === 0 && minuite - 45 < 0) {
   hour = hour - 1;
   minuite = 60 + (minuite - 45);
   console.log(hour, minuite);
-} else if (b - 45 > 0) {
+} else if (minuite - 45 > 0) {
   minuite = minuite - 45;
   console.log(hour, minuite);
 } else if (minuite - 45 === 0) {
