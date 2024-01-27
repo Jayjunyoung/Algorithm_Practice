@@ -8,9 +8,7 @@ let newMatrixA = [];
 let newMatrixB = [];
 
 for (let i = 1; i < input.length; i++) {
-  let newArr = input[i].split(" ");
-
-  newArr = newArr.map((item) => Number(item));
+  let newArr = input[i].split(" ").map((item) => Number(item));
 
   if (i <= n) {
     newMatrixA.push(newArr);
