@@ -3,8 +3,6 @@ const input = require("fs")
   .toString()
   .trim();
 
-let n1 = input.length;
-
 let arr1 = input.split("").join("");
 let arr2 = input.split("").reverse().join("");
 
