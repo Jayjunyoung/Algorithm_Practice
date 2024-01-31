@@ -40,6 +40,7 @@ for (let i = 0; i < input.length; i++) {
   }
 
   if (nowWord === "z") {
+    //앞에 d가 아닌 반례 해주기
     if (leftword !== "d" && rightWord === "=") {
       croatiaWordCount--;
     }
