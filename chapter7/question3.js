@@ -1,20 +1,13 @@
-const input = require("fs")
-  .readFileSync("/codeFile/input.txt")
+const words = require("fs")
+  .readFileSync(0, "utf-8")
   .toString()
   .trim()
   .split("\n");
-
-for (let i = 0; i < input.length; i++) {
-  const n1 = input[i].split("");
-  let result = [];
-
-  for (let j = 0; j < n1.length; j++) {
-    if (input[j][i] === " ") {
-      continue;
-    } else {
-      result.push(input[j][i]);
-    }
+const maxLength = Math.max(...words.map((i) => i.length));
+let vertical = "";
+for (let i = 0; i < maxLength; i++) {
+  for (let j = 0; j < words.length; j++) {
+    vertical += words[j][i] || "";
   }
 }
-
-console.log(result.join(""));
+console.log(vertical);
