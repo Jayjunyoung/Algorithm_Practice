@@ -1,7 +1,7 @@
 const input = require("fs")
   .readFileSync("/codeFile/input.txt")
   .toString()
-  .trim()
+  .trim() //trim()을 통한 공백제거
   .split(" ");
 
 let countWords = 0;

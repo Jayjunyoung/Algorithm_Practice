@@ -9,7 +9,7 @@ let count = 0;
 
 for (let i = 1; i <= n1; i++) {
   let groupN = input[i].split("");
-  const used = [];
+  const used = []; //그룹단어 판단 용도 배열
   let flag = true;
 
   for (let j = 0; j < groupN.length; j++) {
