@@ -13,7 +13,7 @@ for (let i = 1; i <= N; i++) {
     ans.push(i);
   }
 }
-
+//약수의 개수가 K보다 작으면 ex 25가 4보다 작으면
 if (ans.length < K) {
   console.log(0);
 } else {

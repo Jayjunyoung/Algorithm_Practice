@@ -23,6 +23,7 @@ for (let i = 0; i < input.length; i++) {
       croatiaWordCount--;
     }
     if (rightWord === "z" && rrWord === "=") {
+      //count 2 빼줘야함
       croatiaWordCount -= 2;
     }
   }
