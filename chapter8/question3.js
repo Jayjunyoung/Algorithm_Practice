@@ -15,7 +15,7 @@ function solution(change) {
   for (let i = 0; i < coins.length; i++) {
     //map함수로 써서 적용해도 좋을 듯
     count[i] += Math.floor(change / coins[i]);
-    change %= coins[i];
+    //change %= coins[i];
   }
   return count.join(" ");
 }
