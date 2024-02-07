@@ -24,7 +24,9 @@ const answer = array.filter((num) => {
 });
 
 if (answer.length) {
-  console.log(answer.reduce((sum, prime) => (sum += prime)));
+  //ES6 문법 이자 0생략하는 방법
+  //answer.reduce((num, price) => sum+=prime);
+  console.log(answer.reduce((sum, prime) => sum + prime, 0));
   console.log(answer[0]);
 } else {
   console.log(-1);
