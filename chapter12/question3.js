@@ -16,7 +16,8 @@ const x = (c * e - b * f) / (a * e - d * b);
 const y = (c * d - a * f) / (b * d - a * e);
 
 if (x === -0 || y === -0) {
-  return;
+  //js는 -0도 나오기 때문에 0으로 바꿔주기 위한 문자열 처리 필요!
+  console.log(x + " " + y);
 } else {
   console.log(x, y);
 }
