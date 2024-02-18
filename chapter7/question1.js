@@ -31,7 +31,7 @@ function solution(n, m, newMatrixA, newMatrixB) {
   return answerMatrix;
 }
 
-// 출력
+// 출력(문자열)
 let answerStr = "";
 let answerMatrix = solution(n, m, newMatrixA, newMatrixB);
 

@@ -5,8 +5,8 @@ const input = require("fs")
   .split("\n")
   .map((num) => Number(num));
 
-const M = input.shift();
-const N = input.shift();
+const M = input.shift(); //60
+const N = input.shift(); //100
 
 //배열 만들때 +1해서 만들어주기
 const array = Array(N - M + 1)

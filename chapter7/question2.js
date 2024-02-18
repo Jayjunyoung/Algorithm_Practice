@@ -6,6 +6,7 @@ const input = require("fs")
 let max = 0;
 let coord = [1, 1];
 
+//이중 forEach문
 input.forEach((row, rIdx) => {
   row.split(" ").forEach((col, cIdx) => {
     const numCol = Number(col);
