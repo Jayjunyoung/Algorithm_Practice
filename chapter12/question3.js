@@ -12,6 +12,7 @@ const d = input[3];
 const e = input[4];
 const f = input[5];
 
+//노트에 적어놓은 풀이 보기(hint: 각 식에 곱해주기)
 const x = (c * e - b * f) / (a * e - d * b);
 const y = (c * d - a * f) / (b * d - a * e);
 

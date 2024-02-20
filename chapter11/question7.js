@@ -1,6 +1,6 @@
 const input = require("fs").readFileSync(0, "utf-8").trim().split("\n");
 
-let [a, b] = input[0].split(" ").map(Number);
+let [a, b] = input[0].split(" ").map(Number); //7 7
 const c = +input[1];
 const n0 = +input[2];
 

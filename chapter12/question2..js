@@ -28,10 +28,12 @@ for (let i = 1; i <= N; i++) {
   // 자연수 M은 분해합 N의 생성자이므로 빈 배열에 넣음
   if (sum === N) {
     result.push(M);
+    //result에 생성자 삽입
   }
 }
 
 if (result.length === 0) {
+  //분해합이 없다면 0을 출력
   console.log(0);
 } else {
   // 생성자 중 가장 작은 숫자를 출력
