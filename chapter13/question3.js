@@ -4,6 +4,7 @@ let input = require("fs")
   .trim()
   .split("\n");
 
+//A를 받는 사람의 수
 const n2 = +input[0].split(" ")[1];
 
 const absArray = input[1]
