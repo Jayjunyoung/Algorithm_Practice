@@ -4,8 +4,6 @@ N, M = map(int, input().split())
 
 board = []
 
-color = ["W", "B"]
-
 for _ in range(N):
   board.append(input())
 
