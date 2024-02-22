@@ -31,6 +31,7 @@ let black = [
 
 let board = [];
 for (let i = 0; i < N; i++) {
+  //2차원 배열 생성
   //BNBNBN코드들을 한줄씩 뽑은후 ""기준으로 배열 생성
   board[i] = input.shift().split("");
 }
@@ -44,6 +45,7 @@ for (let i = 0; i <= N - 8; i++) {
 }
 
 function check(x, y) {
+  //x에는 j가, y에는 i가 들어감
   let checkWhite = 0;
   let checkBlack = 0;
 

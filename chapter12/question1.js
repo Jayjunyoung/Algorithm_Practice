@@ -24,7 +24,7 @@ for (let i = 0; i < N - 2; i++) {
         maxSum = sum;
       }
     }
-  }
+  } //전 1,3,4번이 가장 어려웠네요
 }
 //for문 모두 끝난 뒤 maxSum 출력
 console.log(maxSum);
