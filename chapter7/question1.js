@@ -11,6 +11,7 @@ for (let i = 1; i < input.length; i++) {
   let newArr = input[i].split(" ").map((item) => Number(item));
 
   if (i <= n) {
+    //2차원배열 생성
     newMatrixA.push(newArr);
   } else {
     newMatrixB.push(newArr);

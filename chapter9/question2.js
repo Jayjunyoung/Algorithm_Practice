@@ -6,7 +6,7 @@ const input = require("fs")
   .map((num) => Number(num)); //여기서 map을 하면 안됌
 
 let [N, K] = input;
-let ans = [];
+let ans = [];//약수를 넣기위한 배열
 
 for (let i = 1; i <= N; i++) {
   if (N % i === 0) {

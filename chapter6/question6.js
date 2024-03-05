@@ -23,7 +23,7 @@ for (let i = 0; i < input.length; i++) {
       croatiaWordCount--;
     }
     if (rightWord === "z" && rrWord === "=") {
-      //count 2 빼줘야함
+      //count 2 빼줘야함 이유: dz= -> 3개일때 1개로 인식하기때문
       croatiaWordCount -= 2;
     }
   }
@@ -47,7 +47,7 @@ for (let i = 0; i < input.length; i++) {
     }
   }
 
-  //알파벳 한글자는 count 추가해주기
+  //알파벳 한글자는 count 한 개 추가해주기
   croatiaWordCount++;
 }
 

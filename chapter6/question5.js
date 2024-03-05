@@ -25,8 +25,8 @@ function solution(input) {
     // obj 전체 property를 확인 해야 하므로 for in 사용
     if (obj[char] > count) {
       // count와 value 비교 해서 value가 더 크면
-      count = obj[char]; // count값 교체해주고
-      result = char.toUpperCase(); // result도 대문자로 변환해서 교체해준다.
+      count = obj[char]; // count값 교체해주고 ex. M에 해당하는 값
+      result = char.toUpperCase(); // result도 대문자로 변환해서 교체해준다. ex. M이 나옴
     } else if (obj[char] === count) {
       //만약 count와 value가 같은 값이 있다면
       result = "?"; // result를 ?로 교체해준다.

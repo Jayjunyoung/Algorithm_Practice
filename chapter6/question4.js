@@ -3,6 +3,7 @@ const input = require("fs")
   .toString()
   .trim();
 
+//문자열 이랑 역으로 순서 바꾼 문자열이랑 비교
 let arr1 = input.split("").join("");
 let arr2 = input.split("").reverse().join("");
 

@@ -6,10 +6,11 @@ const input = require("fs")
   .map((num) => Number(num));
 
 for (let i = 0; i < input.length - 1; i++) {
-  //-1빼고 반복문 범위 설정
+  //입력에서 -1빼고 반복문 범위 설정
   const num = input[i];
   let sum = 0;
   const arr = [];
+  //완전수를 담기위한 배열
   for (let i = 1; i < num; i++) {
     //6,12 일 경우 6이나 12를 제외한 그 전까지의 수를 나눠주기
     if (num % i == 0) {
