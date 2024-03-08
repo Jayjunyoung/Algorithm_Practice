@@ -9,7 +9,7 @@ let array = [];
 let sum = 0;
 
 for (let i = 0; i < n1; i++) {
-  const value = input[i];
+  const value = +input[i];
   if (value === 0) {
     array.pop();
   } else {

@@ -38,9 +38,9 @@ let answerMatrix = solution(n, m, newMatrixA, newMatrixB);
 
 for (let i = 0; i < n; i++) {
   for (let j = 0; j < m; j++) {
-    answerStr += `${answerMatrix[i][j]} `;
+    answerStr += `${answerMatrix[i][j]}`;
   }
   answerStr += `\n`;
 }
 
-console.log(answerStr.trim());
+console.log(answerStr);
