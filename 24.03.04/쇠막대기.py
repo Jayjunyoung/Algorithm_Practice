@@ -19,6 +19,7 @@ def solution():
 
     stack = []
 
+    # 시간복잡도 O(n)
     # bracket 순회
     for i in range(len(bracket)):
         # '(' 기호 시, 파이프의 시작 or 레이저포인트 지점을 알림. 일단 stack에 append 
