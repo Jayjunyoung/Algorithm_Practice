@@ -4,6 +4,7 @@ let [TC, ...input] = require("fs")
   .split("\n");
 input = input.map((i) => i.split(" "));
 const arr = Array.from(Array(100), () => Array(100).fill(0));
+//2차원 배열이 만들어짐
 let count = 0; //색종이 갯수 세주는 용도
 
 for (let i = 0; i < TC; i++) {

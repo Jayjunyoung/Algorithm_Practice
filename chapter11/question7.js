@@ -5,4 +5,5 @@ const c = +input[1];
 const n0 = +input[2];
 
 //수학적으로 넘겼어야 했던 문제 , 조건이 만족됬어야함
+//n0가 n을 의미함
 console.log(+(b <= (c - a) * n0 && c >= a));

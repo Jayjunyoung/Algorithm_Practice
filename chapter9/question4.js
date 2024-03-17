@@ -15,7 +15,7 @@ const answer = array.filter((number) => {
     if (number % i === 0) {
       return false;
     }
-  }
+  } //소수는 1보다 크기때문에 reutrn number > 1;해주기
   return number > 1;
 }).length;
 
