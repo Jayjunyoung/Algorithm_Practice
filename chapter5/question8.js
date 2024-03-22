@@ -8,6 +8,7 @@ let countWords = 0;
 
 for (let i = 0; i < input.length; i++) {
   if (input[i] !== "") {
+    //각 요소들의 값이 있다면
     countWords++;
   }
 }

@@ -7,10 +7,12 @@ const bfs = (graph, startNode) => {
   needVisit.push(startNode);
 
   while (needVisit.length !== 0) {
+    //모든 정점을 다 돌때까지
     const node = needVisit.shift();
     if (!visited.includes(node)) {
       visited.push(node);
       let nodes = graph[node];
+      //graph[node]에 속한 자식들을 의미함
       needVisit = [...needVisit, ...nodes.sort((a, b) => a - b)];
     }
   }
@@ -37,7 +39,7 @@ const dfs = (graph, startNode) => {
 //4 , 5, 1 입력
 let [n, edge, start] = input.shift().split(" ").map(Number);
 let grph = [...Array(n + 1)].map((e) => []);
-//2차원 배열로 만들기
+//그래프를 2차원 배열로 만들기
 
 //간선끼리 양방향 그래프이므로 이어주기
 for (let i = 0; i < edge; i++) {

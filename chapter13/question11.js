@@ -13,9 +13,10 @@ var object = {};
 //내림차순 정렬..큰 숫자부터 확인 가능 ex 즉 5 4 3으로 정렬 될 것
 uniq.sort((a, b) => b - a);
 
-//543 이니까 uniq.length는 3이고 uni1[0] = 5, uniq[1] = 4, uniq[2] = 3
+//543 이니까 uniq.length는 3이고 uni1[0] = -10, uniq[1] = -9, uniq[2] = 2
 for (let i = 0; i < uniq.length; i++) {
   object[uniq[i]] = uniq.length - i - 1;
+  //해당 키에 해당하는 숫자가 몇번째로 큰지 의미함
 }
 
 var str = "";

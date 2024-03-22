@@ -8,6 +8,7 @@ solution(input);
 function solution(input) {
   let lowStr = input.toLowerCase(); // 대소문자를 구분하지 않기 때문에 소문자로 변경,
   let obj = {}; // 문자를 key로 넣고 value를 count로 쓰기 위해 obj 만들어주고
+  //객체로 알파벳의 갯수를 작성해주는 것이 key 포인트
 
   for (let i = 0; i < lowStr.length; i++) {
     if (obj[lowStr[i]] === undefined) {

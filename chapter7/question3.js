@@ -8,6 +8,7 @@ let vertical = "";
 for (let i = 0; i < maxLength; i++) {
   for (let j = 0; j < words.length; j++) {
     //undefined 방지를 위해서 씀
+    //j 의미: 행 / i 의미: 열 의미
     vertical += words[j][i] || "";
   }
 }
