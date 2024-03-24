@@ -59,7 +59,9 @@ function BFS(v) {
       continue;
     }
     visited[x] = 1;
+    //방문처리 해주기
     answer_bfs.push(x);
+    //방문처리한 노드 넣어주기
     for (let i = 0; i < graph[x].length; i++) {
       let next = graph[x][i];
       if (visited[next] === 0) {
