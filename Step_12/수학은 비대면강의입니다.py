@@ -12,3 +12,4 @@ else:
     x = (f - (e * y)) // d
 
 print("%d %d" %(x, y))
+
