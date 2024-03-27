@@ -48,7 +48,7 @@ let idx = 0,
 
 while (true) {
   const [N, M] = input[idx];
-  if (N === 0 && M === 0) break;
+  if (N === 0 && M === 0) break; //종료 조건
   const graph = input.slice(idx + 1, idx + 1 + M);
   treeCount = solution(N, M, graph);
   if (treeCount > 1) {

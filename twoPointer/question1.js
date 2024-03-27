@@ -6,10 +6,12 @@ let input = require("fs")
 
 const n1 = +input.shift();
 const target = +input.pop();
+
 const nums = input[0]
   .split(" ")
   .map((v, i) => +v)
   .sort((a, b) => a - b);
+//숫자처리해주고 오름차순 정렬
 const kill = nums.length;
 
 let start = 0;
