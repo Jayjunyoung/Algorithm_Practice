@@ -6,6 +6,7 @@ let input = require("fs")
 
 const n1 = +input.shift();
 const target = +input.pop();
+//input의 마지막 요소 뽑기
 
 const nums = input[0]
   .split(" ")
@@ -16,6 +17,7 @@ const kill = nums.length;
 
 let start = 0;
 let end = kill - 1;
+//end: 마지막 인덱스
 let answer = 0;
 
 while (start != end) {

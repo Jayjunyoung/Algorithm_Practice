@@ -5,7 +5,7 @@ const input = require("fs")
   .split("\n");
 
 let n1 = +input[0];
-let sumResult = +input[1].split("")[0];
+let sumResult = +input[1].split("")[0]; //초기 sumResult는 5가 들어감
 
 for (let i = 1; i < n1; i++) {
   //12345 -> 2부터 접근해서 하나하나씩 더하기
