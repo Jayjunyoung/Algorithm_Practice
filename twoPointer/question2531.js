@@ -11,7 +11,8 @@ let [N, d, k, c] = input.shift().split(" ").map(Number);
 // 차례대로 8 30 4 40
 
 let check = Array(d + 1).fill(0); //d=30 의미
-let sushi = Array(N).fill(0); //스시 접시의 수
+//초밥은 1번부터 30번까지 있기 때문에 d+1로 해놓고 index가 0일때 초밥의 종류는 1번
+let sushi = Array(N).fill(0); //스시 접시의 수 8개
 
 for (let i = 0; i < N; i++) {
   sushi[i] = Number(input.shift()); //초밥의 종류를 번호로 표현
@@ -49,7 +50,7 @@ for (let s = 0; s < N; s++) {
 
   check[sushi[s]]--;
   //1 2 3 4
-  //2 3 4 5  -> 1 이 빠지고 6이 들어옴
+  //2 3 4 5  -> 1 이 빠지고 5이 들어옴, 5는 인덱스4를 의미함
   if (check[sushi[s]] == 0) cnt--;
   if (check[sushi[end]] == 0) cnt++; //안 먹은거니까 cnt추가해주기
 
