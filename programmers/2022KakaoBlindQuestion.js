@@ -17,10 +17,12 @@ function solution(id_list, report, k) {
     else report_count.set(reported, 1);
   });
 
+  //각 사용자가 신고한 리스트 ex ) [user2, user3]
   const reported_list = Array.from(report_map.values());
 
   report_count.forEach((value, key) => {
     if (value >= k) {
+      //k가 2
       reported_list.forEach((list, index) => {
         if (list.includes(key)) answer[index] = answer[index] + 1;
       });
