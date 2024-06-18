@@ -4,6 +4,7 @@ const input = fs.readFileSync(0, "utf-8").toString().split("\n");
 let [n, m, r] = input[0].split(" ").map(Number);
 let items = input[1].split(" ").map(Number);
 
+//2차원 배열
 let graph = Array.from({ length: n + 1 }, () => []);
 
 for (let i = 2; i < 2 + r; i++) {
@@ -15,6 +16,7 @@ for (let i = 2; i < 2 + r; i++) {
 function dijkstra(graph, start, n) {
   const distances = Array(n + 1).fill(Infinity);
   distances[start] = 0;
+
   const priorityQueue = [[0, start]];
 
   while (priorityQueue.length > 0) {

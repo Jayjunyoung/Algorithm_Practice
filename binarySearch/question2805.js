@@ -23,6 +23,7 @@ function solution(sortedArray, target) {
       end = mid - 1;
     }
   }
+
   return answer;
 }
 
