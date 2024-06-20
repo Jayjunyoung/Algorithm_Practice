@@ -10,11 +10,9 @@ for (let i = 0; i < n; i++) {
   const [start, end, w] = input[i].split(" ").map(Number);
   if (end > d) continue;
   if (end - start <= w) continue;
-
   graph[start].push([end, w]);
 }
 
-let prev = -1;
 for (let i = 0; i <= d; i++) {
   if (i) prev = dist[i - 1]; // 현재 위치 i에 도달하기 위한 이전 위치(i-1)까지의 최단 거리
 
@@ -23,9 +21,10 @@ for (let i = 0; i <= d; i++) {
   for (let [next, cost] of graph[i]) {
     // 현재 위치 i에서 갈 수 있는 지름길 확인
     if (dist[next] > dist[i] + cost) {
-      // 지름길을 통해 next에 도달하는 거리가 기존 거리보다 짧으면 업데이트
+      // 지름길을 통해 next에 도달하는 거리보다 기존 거리가 짧으면 업데이트
       dist[next] = dist[i] + cost;
     }
   }
 }
+
 console.log(dist[d]);
