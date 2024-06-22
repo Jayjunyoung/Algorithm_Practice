@@ -1,6 +1,10 @@
-const input = require("fs").readFileSync(0, "utf-8").toString().split("\n");
+const input = require("fs")
+  .readFileSync(process.platform === "linux" ? "/dev/stdin" : "./input.txt")
+  //trim추가할려면 위에 , 하고 utf-8추가
+  .toString()
+  .split("\n");
 
-const [n, d] = input.shift().split(" ").map(Number);
+const [n, d] = input.shift().split(" ").map(Number); //d가 의미하는 것: 고속도로의 길이
 //dist 배열은 각 지점까지의 최단 거리를 저장한다. 초기값은 모두 무한대로 설정.
 //graph 배열은 인접 리스트 형태로, 각 지점에서 갈 수 있는 지름길을 저장한다.
 let dist = Array(d + 1).fill(Infinity);
@@ -13,6 +17,7 @@ for (let i = 0; i < n; i++) {
   graph[start].push([end, w]);
 }
 
+let prev = -1;
 for (let i = 0; i <= d; i++) {
   if (i) prev = dist[i - 1]; // 현재 위치 i에 도달하기 위한 이전 위치(i-1)까지의 최단 거리
 
