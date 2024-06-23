@@ -7,6 +7,7 @@ const input = require("fs")
 const [n, m, ...arr] = input;
 const busInfo = arr.map((bus) => bus.split(" ").map(Number));
 const dist = Array.from({ length: +n + 1 }, () => Array(+n + 1).fill(Infinity));
+//채워보기
 
 busInfo.forEach((bus) => {
   dist[bus[0]][bus[1]] = Math.min(bus[2], dist[bus[0]][bus[1]]);
@@ -27,6 +28,7 @@ for (let i = 1; i < +n + 1; i++) {
   }
 }
 
+//들어갈 코드는?
 dist.slice(1).map((t) => {
   console.log(t.slice(1).join(" "));
 });
