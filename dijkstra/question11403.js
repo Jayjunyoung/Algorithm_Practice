@@ -5,7 +5,7 @@ const input = require("fs")
   .split("\n");
 
 let N = Number(input.shift());
-let arr = input.map((a) => a.split(" ").map(Number));
+const arr = input.map((a) => a.split(" ").map(Number));
 
 function Solution(matrix, N) {
   for (let k = 0; k < N; k++) {
