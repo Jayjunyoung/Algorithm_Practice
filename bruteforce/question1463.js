@@ -5,13 +5,13 @@ const input = require("fs")
 
 const n1 = Number(input[0]);
 //let answer = [666];
+//count 변수 이용해보시오
 let count = 1;
 let numberOfEnd = 666;
-while (count != n1) {
+//반복문을 완성해보시오
+while (count !== n1) {
   numberOfEnd++;
-  if (String(numberOfEnd).includes("666")) {
-    count++;
-  }
+  if (String(numberOfEnd).includes("666")) count++;
 }
 
 console.log(numberOfEnd);
