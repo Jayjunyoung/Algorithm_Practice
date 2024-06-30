@@ -11,7 +11,9 @@ let numberOfEnd = 666;
 //반복문을 완성해보시오
 while (count !== n1) {
   numberOfEnd++;
-  if (String(numberOfEnd).includes("666")) count++;
+  if (String(numberOfEnd).includes("666")) {
+    count++;
+  }
 }
 
 console.log(numberOfEnd);

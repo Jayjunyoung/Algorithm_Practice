@@ -7,6 +7,7 @@ const [n, m] = input.shift().split(" ").map(Number);
 function solution(n, m) {
   const seq = [...Array(m)].fill(0);
   const visited = [...Array(n)].fill(false);
+  console.log(visited);
   let result = "";
 
   function dfs(k) {
@@ -21,7 +22,7 @@ function solution(n, m) {
       if (!visited[i]) {
         seq[k] = i;
         visited[i] = true;
-        dfs(k + 1);
+        dfs(k + 1); //dfs(1) 호출하며 기저조건 달성
         visited[i] = false;
       }
     }
