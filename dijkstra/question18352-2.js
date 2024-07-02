@@ -6,7 +6,7 @@ const graph = Array.from({ length: n + 1 }, () => []);
 const distances = Array(n + 1).fill(Infinity); // 도로의 거리를 카운트하면서 방문 체크에 이용할 배열
 let answer = [];
 
-// 단방향 그래프 만들기
+// 단방향 그래프 만들기, 연결 리스트 형식
 arr.forEach(([from, to]) => graph[from].push(to));
 
 const bfs = (start) => {
@@ -15,7 +15,7 @@ const bfs = (start) => {
 
   while (queue.length) {
     const now = queue.shift();
-    if (distances[now] == k) {
+    if (distances[now] === k) {
       answer.push(now);
       continue;
     }

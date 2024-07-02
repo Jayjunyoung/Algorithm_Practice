@@ -16,6 +16,7 @@ let direction = [
 function bfs(tmp_q, map, L, R, C) {
   //tmp_q : 시작 노드 의미
   let queue = [tmp_q];
+  //시작노드 방문 처리 해주기
   map[queue[0][0]][queue[0][1]][queue[0][2]] = "#";
 
   while (queue.length) {
@@ -29,8 +30,8 @@ function bfs(tmp_q, map, L, R, C) {
       if (nx < 0 || ny < 0 || nl < 0 || nx >= C || ny >= R || nl >= L) continue;
 
       if (map[nl][ny][nx] !== "#") {
-        if (map[nl][ny][nx] === "E") return `Escaped in ${cnt + 1} minute(s).`;
-        map[nl][ny][nx] = "#"; //방문했음 표시
+        if (map[n1][ny][nx] === "E") return `Escaped in ${cnt + 1} minute(s).`;
+        map[nl][ny][nx] = "#";
         queue.push([nl, ny, nx, cnt + 1]);
       }
     }
@@ -40,11 +41,11 @@ function bfs(tmp_q, map, L, R, C) {
 }
 
 function findStart(map, L, R, C) {
-  for (let l = 0; l < L; l++) {
-    for (let r = 0; r < R; r++) {
-      for (let c = 0; c < C; c++) {
-        if (map[l][r][c] === "S") return [l, r, c, 0];
-        //시작점이므로 처음 카운트는 0일것
+  //시작 노드 찾는 함수
+  for (let i = 0; i < L; i++) {
+    for (let j = 0; j < R; j++) {
+      for (let k = 0; k < C; k++) {
+        if (map[i][j][k] === "S") return [i, j, k, 0];
       }
     }
   }

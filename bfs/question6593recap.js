@@ -4,6 +4,8 @@ const input = require("fs")
   .toString()
   .split("\n");
 
+//내일 안보고 구현해보자(복습)
+
 const answer = [];
 let passPossible = false;
 let [L, R, C] = input.shift().split(" ").map(Number);
