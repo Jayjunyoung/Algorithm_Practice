@@ -11,7 +11,7 @@ let maxInput = Math.max(...inputs);
 let maxRange = maxInput * 2;
 
 //예를 들어 입력값이 30인 경우 -> 60까지의 소수임을 판별하는 배열 생성
-let isPrimeNumber = Array(maxRange + 1).fill(true);
+const isPrimeNumber = Array(maxRange + 1).fill(true);
 isPrimeNumber[0] = isPrimeNumber[1] = false;
 
 for (let i = 2; i <= Math.ceil(Math.sqrt(maxRange)); i++) {

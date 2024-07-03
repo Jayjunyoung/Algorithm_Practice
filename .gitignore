@@ -25,4 +25,4 @@ Practice_Algorithm/Practice_Algorithm/ARM64/Debug/Practice_Algorithm.log
 Practice_Algorithm/Practice_Algorithm/ARM64/Debug/vc143.idb
 Practice_Algorithm/Practice_Algorithm/Practice_Algorithm.vcxproj.filters
 Practice_Algorithm/Practice_Algorithm/Practice_Algorithm.vcxproj.user
-*.txt
+./input.txt
