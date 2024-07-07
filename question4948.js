@@ -24,7 +24,7 @@ for (let i = 2; i <= Math.ceil(Math.sqrt(maxRange)); i++) {
 
 let results = inputs.map((input) => {
   let count = 0;
-  for (let i = input + 1; i <= input * 2; i++) {
+  for (let i = input + 1; i <= 2 * input; i++) {
     if (isPrimeNumber[i]) {
       count++;
     }

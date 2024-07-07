@@ -4,7 +4,7 @@ const input = require("fs")
   .split("\n");
 
 let direction = [
-  //2차원배열 구조
+  //2차원배열 구조.
   [1, 0, 0],
   [-1, 0, 0],
   [0, 1, 0],

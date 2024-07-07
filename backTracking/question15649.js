@@ -4,10 +4,10 @@ const input = require("fs")
   .split("\n");
 
 const [n, m] = input.shift().split(" ").map(Number);
+
 function solution(n, m) {
   const seq = [...Array(m)].fill(0);
-  const visited = [...Array(n)].fill(false);
-  console.log(visited);
+  const visited = [...Array(n + 1)].fill(false); // n+1 크기의 배열 생성
   let result = "";
 
   function dfs(k) {
@@ -20,9 +20,10 @@ function solution(n, m) {
     }
     for (let i = 1; i <= n; i++) {
       if (!visited[i]) {
+        // 1부터 시작하는 인덱스
         seq[k] = i;
         visited[i] = true;
-        dfs(k + 1); //dfs(1) 호출하며 기저조건 달성
+        dfs(k + 1);
         visited[i] = false;
       }
     }

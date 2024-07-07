@@ -44,13 +44,11 @@ const bfs = (startX, startY) => {
     // 방문 표시 및 집의 수 증가
     houses[x][y] = 0;
     result += 1;
-
     // 상하좌우 방향으로 탐색
-    for (let i = 0; i < dirs.length; i++) {
-      const xPosition = x + dirs[i][0];
-      const yPosition = y + dirs[i][1];
+    for (let dir of dirs) {
+      const xPosition = x + dir[0];
+      const yPosition = y + dir[1];
 
-      // 좌표가 유효한지 확인
       if (
         xPosition < 0 ||
         yPosition < 0 ||
