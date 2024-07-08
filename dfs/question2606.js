@@ -12,17 +12,18 @@ let count = 0;
 
 for (let i = 0; i < m; i++) {
   //인접그래프 형태의 그래프 완성
-  const [first, second] = input[i].split(" ").map(Number);
+
+  const [first, second] = input[i].split(" ");
   graph[first].push(second);
   graph[second].push(first);
 }
 
 const dfs = (start) => {
-  for (let i of graph[start]) {
-    if (!visited[i]) {
-      visited[i] = true;
+  for (let node of graph[start]) {
+    if (!visited[node]) {
+      visited[node] = true;
       count++;
-      dfs(i);
+      dfs(node);
     }
   }
 };
