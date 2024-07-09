@@ -27,21 +27,21 @@ if (n === 1) {
   console.log(-1);
 }
 
+//bfs함수 완성해보기(복습)
 const BFS = (start) => {
   const queue = [[start, 0]];
 
   while (queue.length) {
     let [qx, count] = queue.shift();
-    let nearQx = graph[qx]; // 1촌 관계 그래프 가져오기
-    if (visited[qx]) continue; // 방문체크
+    let nearQx = graph[qx];
+    if (visited[qx]) continue;
     if (qx === y) return count;
     visited[qx] = true;
-
     // 1촌 관계 반복문으로 순회
     for (let i = 0; i < nearQx.length; i++) {
       let value = nearQx[i];
-      if (visited[value]) continue; // 방문체크
-      if (value === y) return count + 1; // y값과 일치하면 +1 해서 출력
+      if (visited[value]) continue;
+      if (value === y) return count + 1;
       queue.push([value, count + 1]);
     }
   }
