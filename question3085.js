@@ -31,6 +31,7 @@ function candySwap(i, j) {
       i + x < N &&
       j + y < N &&
       candy[i + x][j + y] != candy[i][j]
+      //이동된 캔디와 현재 캔디가 같지 않아야함
     ) {
       //swap 로직 사용
       let temp = candy[i][j];
