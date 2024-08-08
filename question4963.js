@@ -31,8 +31,8 @@ while (input.length > 1) {
 
     while (queue.length) {
       const [x, y] = queue.shift();
-      for (let i = 0; i < 8; i++) {
-        const [newX, newY] = [x + dir[i][0], y + dir[i][1]];
+      for (let [dx, dy] of dir) {
+        const [newX, newY] = [x + dx, y + dy];
         if (newX >= 0 && newX < h && newY >= 0 && newY < w) {
           if (graph[newX][newY] === 1 && visited[newX][newY] === false) {
             visited[newX][newY] = true;
