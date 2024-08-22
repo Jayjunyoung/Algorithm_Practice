@@ -24,13 +24,11 @@ const bfs = (startX, startY) => {
 
   while (queue.length) {
     const [x, y, dist] = queue.shift();
-
     if (x === n - 1 && y === m - 1) {
       return { distance: dist, swordDist };
     }
     if (maps[x][y] === 2) {
-      //n-1, m-1이 목표지점을 의미
-      swordDist = dist + (n - 1 - x) + (m - 1 - y); // 검을 획득한 후 목표 지점까지의 거리 계산
+      swordDist = dist + (n - 1 - x) + (m - 1 - y);
     }
 
     for (let [dx, dy] of directions) {

@@ -19,15 +19,15 @@ const hackingCount = Array(N + 1).fill(0);
 
 const BFS = (start) => {
   const queue = [start];
-  const visited = Array(N + 1).fill(false);
+  let visited = Array(N + 1).fill(false);
   visited[start] = true;
-  let count = 0; // 해킹 가능한 컴퓨터의 수 카운트
+  let count = 0; //매번 bfs시작될 때 count 초기화해줘야지
 
   while (queue.length) {
     let cur = queue.shift();
-    count += 1;
+    count++;
     for (let i = 0; i < graph[cur].length; i++) {
-      let value = graph[cur][i];
+      const value = graph[cur][i];
       if (!visited[value]) {
         visited[value] = true;
         queue.push(value);
