@@ -10,7 +10,7 @@ const findLocationNumber = +input[0]; //35를 의미
 const findLocation = [];
 const grid = Array.from({ length: n }, () => Array(n).fill(0));
 
-let endNumbers = n * n; //49
+let endNumbers = n * n;
 let [x, y] = [0, 0];
 
 let dx = [1, 0, -1, 0]; //하 우 상 좌 방향으로 움직일 거임
@@ -19,17 +19,18 @@ let direction = 0;
 
 while (endNumbers > 0) {
   grid[x][y] = endNumbers;
+  //while문을 빠져나가기 위한 조건문
   if (endNumbers === findLocationNumber) {
-    findLocation.push(x + 1, y + 1); //2차원 배열
+    findLocation.push(x + 1, y + 1);
   }
-
   const nx = x + dx[direction];
   const ny = y + dy[direction];
-
+  //grid[nx][ny] !== 0 : 숫자가 채워진 경우
   if (nx < 0 || ny < 0 || nx >= n || ny >= n || grid[nx][ny] !== 0) {
     direction = (direction + 1) % 4;
   }
 
+  //0,0인 x랑 y에 대입
   x += dx[direction];
   y += dy[direction];
 

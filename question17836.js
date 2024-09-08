@@ -16,11 +16,12 @@ const directions = [
   [-1, 0], //북
 ];
 
+let swordDist = Infinity;
+
 const bfs = (startX, startY) => {
   const queue = [[startX, startY, 0]];
   const visited = Array.from({ length: n }, () => Array(m).fill(false));
   visited[startX][startY] = true;
-  let swordDist = Infinity;
 
   while (queue.length) {
     const [x, y, dist] = queue.shift();
