@@ -10,10 +10,10 @@ const maps = input.map((line) => line.split("").map(Number));
 function bfs(N, K, maps) {
   const queue = [[0, 0, 0]]; // [position, row, time] 초기 상태는 첫줄의 첫 위치에 첫 타임
   const visited = Array.from({ length: 2 }, () => Array(N).fill(false));
-  visited[0][0] = true;
+  visited[0][0] = true; //시작점 방문 처리
 
   while (queue.length > 0) {
-    const [position, row, time] = queue.shift();
+    const [row, position, time] = queue.shift();
 
     // 현재 위치가 N 이상이면 성공적으로 탈출
     if (position >= N) {
@@ -29,7 +29,7 @@ function bfs(N, K, maps) {
       maps[row][position + 1] === 1
     ) {
       visited[row][position + 1] = true;
-      queue.push([position + 1, row, time + 1]);
+      queue.push([row, position + 1, time + 1]);
     }
 
     // 2. 현재 줄에서 한 칸 뒤로 이동 (안전한 칸이어야 이동 가능)
@@ -40,7 +40,7 @@ function bfs(N, K, maps) {
       maps[row][position - 1] === 1
     ) {
       visited[row][position - 1] = true;
-      queue.push([position - 1, row, time + 1]);
+      queue.push([row, position - 1, time + 1]);
     }
 
     // 3. 반대 줄로 K 칸 앞 이동 (안전한 칸이어야 이동 가능)
@@ -48,7 +48,7 @@ function bfs(N, K, maps) {
     if (position + K < N) {
       if (!visited[newRow][position + K] && maps[newRow][position + K] === 1) {
         visited[newRow][position + K] = true;
-        queue.push([position + K, newRow, time + 1]);
+        queue.push([newRow, position + K, time + 1]);
       }
     } else {
       // N을 넘어서면 탈출 성공

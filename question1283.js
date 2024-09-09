@@ -16,7 +16,7 @@ for (let i = 0; i < n; i++) {
   // 각 단어의 첫 글자를 단축키로 설정하는 루프
   for (let j = 0; j < words.length; j++) {
     let word = words[j];
-    //word에는 차례대로 Save, us가 들어갈 것
+
     let key = word[0].toLocaleLowerCase();
     if (!usedKeys.has(key)) {
       usedKeys.add(key);
