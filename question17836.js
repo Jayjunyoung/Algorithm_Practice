@@ -23,15 +23,19 @@ const bfs = (startX, startY) => {
   const visited = Array.from({ length: n }, () => Array(m).fill(false));
   visited[startX][startY] = true;
 
+  //큐가 없을 때 까지
   while (queue.length) {
     const [x, y, dist] = queue.shift();
+    //마지막 좌표에 도달했을 때 탈출문
     if (x === n - 1 && y === m - 1) {
       return { distance: dist, swordDist };
     }
+    //검을 찾았을 때 탈출하는 조건문
     if (maps[x][y] === 2) {
       swordDist = dist + (n - 1 - x) + (m - 1 - y);
     }
 
+    //이동하는 새로운 좌표를 구하기위해 사용
     for (let [dx, dy] of directions) {
       const nx = x + dx;
       const ny = y + dy;
