@@ -10,12 +10,14 @@ const N = parseInt(n);
 const moves = input.slice(0, N);
 
 function posToCoord(pos) {
+  //좌표는 1부터 시작하므로 1개 더해주는 것
   const x = pos.charCodeAt(0) - "A".charCodeAt(0) + 1;
   const y = parseInt(pos[1]);
-  return [x, y];
+  return [x, y]; //좌표 반환
 }
 
 //console.log에서 함수호출
+//문자로 바꿀때는 인덱스가 0 기반 이기 때문에 하나 빼주기
 function coordToPos(x, y) {
   const col = String.fromCharCode("A".charCodeAt(0) + x - 1);
   const row = y.toString();
@@ -40,6 +42,7 @@ let [stoneX, stoneY] = posToCoord(stonePos);
 
 for (let i = 0; i < N; i++) {
   const move = moves[i];
+  //객체의 키에 해당하는 배열 조회
   const [dx, dy] = moveMap[move];
 
   const newKingX = kingX + dx;
